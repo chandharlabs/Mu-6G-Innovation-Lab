@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;        /* Full screen height */
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  background: #f8fafc;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+.navbar {
+  height: 110px;
+  position: relative;           /* Needed for absolute menu */
+  display: flex;
+  align-items: center;
+  padding: 12px 40px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 110px;
+  width: auto;
+}
+
+/* ================= HEADER TEXT ================= */
+.header-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);   /* TRUE CENTER */
+  text-align: center;
+}
+
+.header-university {
+  font-size: 1.5rem;    /* BIGGER */
+  font-weight: 800;
+  color: #E31837;
+}
+
+
+.header-title {
+  font-size: 2rem;             /* Bigger heading */
+  font-weight: 800;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+/* ================= NAV LINKS ================= */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  position: absolute;
+  right: 40px;     /* Right corner */
+  bottom: 10px;    /* Bottom edge */
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.active {
+  color: #e31837;
+  font-weight: 700;
+}
+
+/* ================= COMPACT TOP BANNER ================= */
+.top-banner {
+  height: 32vh;
+  background: #E31837;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  color: white;
+  padding: 40px 20px 0;
+}
+
+.banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeDown 0.9s ease-out;
+}
+
+/* Badge */
+.banner-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+  backdrop-filter: blur(6px);
+}
+
+/* Title */
+.banner-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+/* Underline accent */
+.banner-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ffffff;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* Subtitle */
+.banner-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto 18px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 9px 20px;
+  background: #ffffff;
+  color: #B8121E;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #fde8ea;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.section.light {
+  background: #fdf2f2;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #B8121E;
+}
+
+/* ================= CARDS ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #B8121E;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;   /* Push footer to bottom */
+}
+
+
+/* ================= ANIMATION ================= */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= CONTACT ================= */
+.contact-section {
+  padding: 80px 10%;
+  background: #fdf2f2;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #E31837;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Contact Info */
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #E31837;
+}
+
+.contact-form button {
+  background: #E31837;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #b1122b;
+}
+
