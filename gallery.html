@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Mahindra University 6G Innovation Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <!-- LEFT: Logo -->
+  <div class="logo-area">
+    <img src="images/mahindra-logo.png" alt="Mahindra University Logo" class="logo-img">
+  </div>
+
+  <!-- CENTER: LAB TITLE -->
+  <div class="header-text">
+    <div class="header-university">Mahindra University</div>
+    <div class="header-title">6G Innovation Lab</div>
+  </div>
+
+  <!-- RIGHT: NAV LINKS -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="facilities.html">Facilities</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+</nav>
+
+<!-- GALLERY SECTION -->
+<section class="section light">
+  <h2>Gallery</h2>
+  <p style="max-width: 800px; margin: 0 auto 40px;">
+    A glimpse into the Mahindra University 6G Innovation Lab activities, facilities, and research demonstrations.
+  </p>
+
+  <div class="gallery-grid">
+ 
+    <div class="gallery-item">
+      <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(0)">
+      <div class="caption">Private 5G Testbed Setup</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img2.jpeg" alt="SDR Experiment in Lab" onclick="openLightbox(1)">
+      <div class="caption">SDR Experiment in Lab</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(2)">
+      <div class="caption">Student Demonstration Session</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img4.jpeg" alt="6G Research Equipment" onclick="openLightbox(3)">
+      <div class="caption">6G Research Equipment</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(4)">
+      <div class="caption">Industry Collaboration Visit</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(5)">
+      <div class="caption">Network Slicing Demo</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(6)">
+      <div class="caption">Student Project Showcase</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+
+  <!-- Navigation -->
+  <span class="nav prev" onclick="prevImage()">&#10094;</span>
+  <span class="nav next" onclick="nextImage()">&#10095;</span>
+
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Mahindra University 6G Innovation Lab</p>
+</footer>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+  let currentIndex = 0;
+
+  const images = [
+    { src: "images/Img5.jpeg", caption: "Industry Collaboration Visit" },
+    { src: "images/Img1.jpeg", caption: "Private 5G Testbed Setup" },
+    { src: "images/Img2.jpeg", caption: "SDR Experiment in Lab" },
+    { src: "images/Img3.jpeg", caption: "Student Demonstration Session" },
+    { src: "images/Img4.jpeg", caption: "6G Research Equipment" },
+
+    { src: "images/Img6.jpeg", caption: "Network Slicing Demo" },
+    { src: "images/Img7.jpeg", caption: "Student Project Showcase" }
+  ];
+
+  function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById("lightbox").style.display = "flex";
+    updateLightbox();
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightbox();
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    const img = document.getElementById("lightbox-img");
+    const caption = document.getElementById("lightbox-caption");
+    img.src = images[currentIndex].src;
+    caption.textContent = images[currentIndex].caption;
+  }
+
+  // Keyboard navigation (optional but nice)
+  document.addEventListener("keydown", function(e) {
+    if (document.getElementById("lightbox").style.display === "flex") {
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "Escape") closeLightbox();
+    }
+  });
+</script>
+
+</body>
+</html>
+

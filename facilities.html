@@ -7,46 +7,137 @@
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="navbar">
 
-  <!-- Logo -->
+  <!-- LEFT: Logo -->
   <div class="logo-area">
     <img src="images/mahindra-logo.png" alt="Mahindra University Logo" class="logo-img">
   </div>
 
-  <!-- Center Title -->
+  <!-- CENTER: LAB TITLE -->
   <div class="header-text">
     <div class="header-university">Mahindra University</div>
     <div class="header-title">6G Innovation Lab</div>
   </div>
 
-  <!-- Menu -->
+  <!-- RIGHT: NAV LINKS -->
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="research.html">Research</a></li>
-    <li><a href="facilities.html">Facilities</a></li>
+    <li><a href="facilities.html" class="active">Facilities</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
     <li><a href="team.html">Team</a></li>
+    <li><a href="publications.html">Publications</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 
 </nav>
-
 
 <section class="section">
   <h2>Laboratory Infrastructure</h2>
 </section>
 
 <section class="section light">
-  <div class="cards">
-    <div class="card">SDR Platforms (USRP, LimeSDR)</div>
-    <div class="card">Private 5G Core Network</div>
-    <div class="card">High-Performance Servers</div>
-    <div class="card">Protocol Analyzers</div>
-    <div class="card">Edge Computing Nodes</div>
-    <div class="card">IoT Testbeds</div>
+  <h2>Laboratory Infrastructure</h2>
+  <p style="max-width: 800px; margin: 0 auto 40px;">
+    Our laboratory hosts advanced platforms for next-generation wireless research.
+    Click on each system below to explore architecture, use cases, tools, and capabilities.
+  </p>
+
+  <div class="accordion">
+
+    <!-- ITEM 1 -->
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        Private 5G Core Network (SA & NSA)
+        <span class="icon">+</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li><strong>Architecture:</strong> End-to-end 5G core supporting both Standalone (SA) and Non-Standalone (NSA) modes.</li>
+          <li><strong>Use Cases:</strong> Smart campus, private enterprise networks, network slicing experiments.</li>
+          <li><strong>Tools Used:</strong> Open5GS, UERANSIM, srsRAN, custom core modules.</li>
+          <li><strong>Capabilities:</strong> Testing and validating new 5G technologies, applications, and services before large-scale deployment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        Deep Radio
+        <span class="icon">+</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li><strong>Architecture:</strong> Deep Radio is an SDR based platform to process real-time signals.</li>
+          <li><strong>Use Cases:</strong> Waveform design, spectrum sensing, Live FM transmitter.</li>
+          <li><strong>Tools Used:</strong> GNU Radio, Python, USRP/LimeSDR, TensorFlow/PyTorch.</li>
+          <li><strong>Capabilities:</strong> Real-time signal processing, deep-learning-based optimization.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        Wi-Guy
+        <span class="icon">+</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li><strong>Architecture:</strong> Wi‑Guy is an SDR‑based educational platform for learning wireless communication fundamentals.</li>
+          <li><strong>Use Cases:</strong> Hands‑on SDR experiments, Academic and training usage, RF Spectrum Scanning</li>
+          <li><strong>Tools Used:</strong> Wi-Guy hardware modules, custom RF configurations.</li>
+          <li><strong>Capabilities:</strong> Decoding FM Radio Stations, Decoding 2G(GSM) Signals, channel analysis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        IoT Bridge
+        <span class="icon">+</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li><strong>Architecture:</strong> The IoT Security Testbed enables experimentation on security, privacy, and resilience of IoT networks.</li>
+          <li><strong>Use Cases:</strong> Smart campus, industrial automation, cyber-physical systems.</li>
+          <li><strong>Tools Used:</strong> MQTT, Node-RED, Edge servers, custom APIs.</li>
+          <li><strong>Capabilities:</strong> Device orchestration, data analytics, real-time monitoring.</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<script>
+  function toggleAccordion(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector(".icon");
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      icon.textContent = "+";
+    } else {
+      // Close any open accordion first
+      document.querySelectorAll(".accordion-content").forEach(item => {
+        item.style.maxHeight = null;
+      });
+      document.querySelectorAll(".accordion-header .icon").forEach(ic => {
+        ic.textContent = "+";
+      });
+
+      content.style.maxHeight = content.scrollHeight + "px";
+      icon.textContent = "−";
+    }
+  }
+</script>
+
 
 <footer>
   <p>© 2026 Mahindra University 5G Lab</p>
