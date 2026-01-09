@@ -25,12 +25,12 @@
   <!-- RIGHT: NAV LINKS -->
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="facilities.html">Facilities</a></li>
-    <li><a href="gallery.html" class="active">Gallery</a></li>
     <li><a href="team.html">Team</a></li>
+    <li><a href="collaborations.html">Collaborations</a></li>    
     <li><a href="publications.html">Publications</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 
@@ -40,44 +40,37 @@
 <section class="section light">
   <h2>Gallery</h2>
   <p style="max-width: 800px; margin: 0 auto 40px;">
-    A glimpse into the Mahindra University 6G Innovation Lab activities, facilities, and research demonstrations.
+    6G Innovation Lab activities, facilities, and research demonstrations.
   </p>
 
   <div class="gallery-grid">
  
     <div class="gallery-item">
       <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(0)">
-      <div class="caption">Private 5G Testbed Setup</div>
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img2.jpeg" alt="SDR Experiment in Lab" onclick="openLightbox(1)">
-      <div class="caption">SDR Experiment in Lab</div>
+      <img src="images/Img2.jpeg" onclick="openLightbox(1)">
     </div>
 
     <div class="gallery-item">
       <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(2)">
-      <div class="caption">Student Demonstration Session</div>
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img4.jpeg" alt="6G Research Equipment" onclick="openLightbox(3)">
-      <div class="caption">6G Research Equipment</div>
+      <img src="images/Img4.jpeg" alt="Five-Nines Radio (5G Testbed)" onclick="openLightbox(3)">
     </div>
 
     <div class="gallery-item">
       <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(4)">
-      <div class="caption">Industry Collaboration Visit</div>
     </div>
 
     <div class="gallery-item">
       <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(5)">
-      <div class="caption">Network Slicing Demo</div>
     </div>
 
     <div class="gallery-item">
       <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(6)">
-      <div class="caption">Student Project Showcase</div>
     </div>
 
   </div>
@@ -101,7 +94,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Mahindra University 6G Innovation Lab</p>
+  <p>© 2026 Mahidra University 6G Innovation Lab</p>
 </footer>
 
 <!-- LIGHTBOX SCRIPT -->
@@ -141,9 +134,7 @@
 
   function updateLightbox() {
     const img = document.getElementById("lightbox-img");
-    const caption = document.getElementById("lightbox-caption");
     img.src = images[currentIndex].src;
-    caption.textContent = images[currentIndex].caption;
   }
 
   // Keyboard navigation (optional but nice)
