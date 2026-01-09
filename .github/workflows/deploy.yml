@@ -1,4 +1,4 @@
-name: Deploy Mahindra 6G Lab Website
+name: MU 6G Lab Website
 
 on:
   push:
