@@ -64,8 +64,8 @@ body {
   display: flex;
   gap: 20px;
   position: absolute;
-  right: 1070px;
-  bottom: 0px;
+  left: 160px;
+  bottom: -3px;
   margin: 0;
   padding: 0;
 }
