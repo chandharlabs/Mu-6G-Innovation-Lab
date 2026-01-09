@@ -707,14 +707,24 @@ footer {
 
 
 /* Accordion Image */
+
+
 .accordion-image {
-  margin: 20px 0;
   text-align: center;
+  margin: 20px 0;
 }
 
 .accordion-image img {
-  max-width: 100%;
+  width: 80%;
+  max-width: 500px;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
+
+@media (max-width: 600px) {
+  .accordion-image img {
+    width: 100%;
+  }
+}
+
