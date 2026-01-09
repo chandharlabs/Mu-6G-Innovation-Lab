@@ -704,3 +704,17 @@ footer {
   margin-bottom: 25px;
   opacity: 0.95;
 }
+
+
+/* Accordion Image */
+.accordion-image {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.accordion-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
