@@ -11,18 +11,15 @@
 <!-- NAVBAR -->
 <nav class="navbar">
 
-  <!-- LEFT: Logo -->
   <div class="logo-area">
     <img src="images/mahindra-logo.png" alt="Mahindra University Logo" class="logo-img">
   </div>
 
-  <!-- CENTER: LAB TITLE -->
   <div class="header-text">
     <div class="header-university">Mahindra University</div>
     <div class="header-title">6G Innovation Lab</div>
   </div>
 
-  <!-- RIGHT: NAV LINKS -->
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html">Research</a></li>
@@ -36,49 +33,53 @@
 
 </nav>
 
-<div class="gallery-grid">
+<!-- GALLERY SECTION (BACKGROUND PRESERVED) -->
+<section class="section light">
+  <h2>Gallery</h2>
+  <p style="max-width: 800px; margin: 0 auto 40px;">
+    6G Innovation Lab activities, facilities, and research demonstrations.
+  </p>
 
-  <div class="gallery-item">
-    <img src="images/evolve.jpeg" alt="Evolve Centre" onclick="openLightbox(0)">
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="images/evolve.jpeg" alt="Lab Workspace" onclick="openLightbox(0)">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(1)">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img2.jpeg" alt="SDR Experiment in Lab" onclick="openLightbox(2)">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(3)">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img4.jpeg" alt="6G Research Equipment" onclick="openLightbox(4)">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(5)">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(6)">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+    </div>
+
   </div>
+</section>
 
-  <div class="gallery-item">
-    <img src="images/Img4.jpeg" alt="Five-Nines Radio (5G Testbed)" onclick="openLightbox(1)">
-  </div>
-
-  <div class="gallery-item">
-    <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(2)">
-  </div>
-    
-  <div class="gallery-item">
-    <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(3)">
-  </div>
-
-  <div class="gallery-item">
-    <img src="images/Img2.jpeg" alt="SDR Experiment in Lab" onclick="openLightbox(4)">
-  </div>
-
-  <div class="gallery-item">
-    <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(5)">
-  </div>
-
-  <div class="gallery-item">
-    <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(6)">
-  </div>
-
-  <div class="gallery-item">
-    <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
-  </div>
-
-</div>
-
-
-<!-- LIGHTBOX -->
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
   <span class="close" onclick="closeLightbox()">&times;</span>
-
-  <!-- Navigation -->
   <span class="nav prev" onclick="prevImage()">&#10094;</span>
   <span class="nav next" onclick="nextImage()">&#10095;</span>
 
@@ -90,7 +91,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Mahidra University 6G Innovation Lab</p>
+  <p>© 2026 Mahindra University 6G Innovation Lab</p>
 </footer>
 
 <!-- LIGHTBOX SCRIPT -->
@@ -131,7 +132,6 @@
   function updateLightbox() {
     const img = document.getElementById("lightbox-img");
     const caption = document.getElementById("lightbox-caption");
-
     img.src = images[currentIndex].src;
     caption.textContent = images[currentIndex].caption;
   }
