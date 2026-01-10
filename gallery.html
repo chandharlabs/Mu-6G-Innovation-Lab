@@ -36,46 +36,42 @@
 
 </nav>
 
-<!-- GALLERY SECTION -->
-<section class="section light">
-  <h2>Gallery</h2>
-  <p style="max-width: 800px; margin: 0 auto 40px;">
-    6G Innovation Lab activities, facilities, and research demonstrations.
-  </p>
+<div class="gallery-grid">
 
-  <div class="gallery-grid">
- 
-    <div class="gallery-item">
-      <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(0)">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/Img2.jpeg" onclick="openLightbox(1)">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(2)">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/Img4.jpeg" alt="Five-Nines Radio (5G Testbed)" onclick="openLightbox(3)">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(4)">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(5)">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(6)">
-    </div>
-
+  <div class="gallery-item">
+    <img src="images/evolve.jpeg" alt="Evolve Centre" onclick="openLightbox(0)">
   </div>
 
-</section>
+  <div class="gallery-item">
+    <img src="images/Img4.jpeg" alt="Five-Nines Radio (5G Testbed)" onclick="openLightbox(1)">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(2)">
+  </div>
+    
+  <div class="gallery-item">
+    <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(3)">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/Img2.jpeg" alt="SDR Experiment in Lab" onclick="openLightbox(4)">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(5)">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(6)">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+  </div>
+
+</div>
+
 
 <!-- LIGHTBOX -->
 <!-- LIGHTBOX -->
@@ -102,12 +98,12 @@
   let currentIndex = 0;
 
   const images = [
-    { src: "images/Img5.jpeg", caption: "Industry Collaboration Visit" },
+    { src: "images/evolve.jpeg", caption: "Evolve Centre – 6G Innovation Lab" },
+    { src: "images/Img4.jpeg", caption: "Five-Nines Radio (5G Testbed)" },
+    { src: "images/Img3.jpeg", caption: "Lab Head Dr. Subbarao Boddu with Industry Partner during testbed setup." },
     { src: "images/Img1.jpeg", caption: "Private 5G Testbed Setup" },
     { src: "images/Img2.jpeg", caption: "SDR Experiment in Lab" },
-    { src: "images/Img3.jpeg", caption: "Student Demonstration Session" },
-    { src: "images/Img4.jpeg", caption: "6G Research Equipment" },
-
+    { src: "images/Img5.jpeg", caption: "Research and development workspace of the 6G Innovation Lab, equipped for SDR, networking, and experimental wireless systems." },
     { src: "images/Img6.jpeg", caption: "Network Slicing Demo" },
     { src: "images/Img7.jpeg", caption: "Student Project Showcase" }
   ];
@@ -134,10 +130,12 @@
 
   function updateLightbox() {
     const img = document.getElementById("lightbox-img");
+    const caption = document.getElementById("lightbox-caption");
+
     img.src = images[currentIndex].src;
+    caption.textContent = images[currentIndex].caption;
   }
 
-  // Keyboard navigation (optional but nice)
   document.addEventListener("keydown", function(e) {
     if (document.getElementById("lightbox").style.display === "flex") {
       if (e.key === "ArrowRight") nextImage();
