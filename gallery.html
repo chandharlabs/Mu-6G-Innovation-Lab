@@ -45,75 +45,87 @@
   <div class="gallery-grid">
 
     <div class="gallery-item">
-      <img src="images/evolve.jpeg" alt="Lab Workspace" onclick="openLightbox(0)">
+      <img src="images/evolve.jpeg" alt="Lab Workspace" onclick="openLightbox(0, 'lab')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(1)">
+      <img src="images/Img1.jpeg" alt="Private 5G Testbed Setup" onclick="openLightbox(1, 'lab')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img2.jpeg" alt="SDR Experiment in Lab" onclick="openLightbox(2)">
+      <img src="images/Img2.jpeg" alt="SDR Experiment in Lab" onclick="openLightbox(2, 'lab')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(3)">
+      <img src="images/Img3.jpeg" alt="Student Demonstration Session" onclick="openLightbox(3, 'lab')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img4.jpeg" alt="6G Research Equipment" onclick="openLightbox(4)">
+      <img src="images/Img4.jpeg" alt="6G Research Equipment" onclick="openLightbox(4, 'lab')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(5)">
+      <img src="images/Img5.jpeg" alt="Industry Collaboration Visit" onclick="openLightbox(5, 'lab')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(6)">
+      <img src="images/Img6.jpeg" alt="Network Slicing Demo" onclick="openLightbox(6, 'lab')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(7, 'lab')">
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section light">
+  <h2>ICASSP Satellite Event</h2>
+  <p style="max-width: 800px; margin: 0 auto 40px;">
+    ICASSP Satellite Event held on <strong>9th November 2024</strong>.
+  </p>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="images/Img8.jpeg" alt="ICASSP Event" onclick="openLightbox(0, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img8.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img9.jpeg" alt="ICASSP Event" onclick="openLightbox(1, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img9.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img10.jpeg" alt="ICASSP Event" onclick="openLightbox(2, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img10.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img11.jpeg" alt="ICASSP Event" onclick="openLightbox(3, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img11.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img12.jpeg" alt="ICASSP Event" onclick="openLightbox(4, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img12.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img13.jpeg" alt="ICASSP Event" onclick="openLightbox(5, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img13.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
-    </div>
-    
-    <div class="gallery-item">
-      <img src="images/Img14.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img14.jpeg" alt="ICASSP Event" onclick="openLightbox(6, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img15.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img15.jpeg" alt="ICASSP Event" onclick="openLightbox(7, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img16.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img16.jpeg" alt="ICASSP Event" onclick="openLightbox(8, 'icassp')">
     </div>
 
     <div class="gallery-item">
-      <img src="images/Img17.jpeg" alt="Student Project Showcase" onclick="openLightbox(7)">
+      <img src="images/Img17.jpeg" alt="ICASSP Event" onclick="openLightbox(9, 'icassp')">
     </div>
 
   </div>
@@ -139,16 +151,20 @@
 <!-- LIGHTBOX SCRIPT -->
 <script>
   let currentIndex = 0;
+  let currentGallery = [];
 
-  const images = [
+  const labImages = [
     { src: "images/evolve.jpeg", caption: "Evolve Centre – 6G Innovation Lab" },
-    { src: "images/Img4.jpeg", caption: "Five-Nines Radio (5G Testbed)" },
-    { src: "images/Img3.jpeg", caption: "Lab Head Dr. Subbarao Boddu with Industry Partner during testbed setup." },
     { src: "images/Img1.jpeg", caption: "Private 5G Testbed Setup" },
     { src: "images/Img2.jpeg", caption: "SDR Experiment in Lab" },
-    { src: "images/Img5.jpeg", caption: "Research and development workspace of the 6G Innovation Lab, equipped for SDR, networking, and experimental wireless systems." },
-    { src: "images/Img6.jpeg", caption: "Network Slicing Demo" },
-    { src: "images/Img7.jpeg", caption: "Student Project Showcase" },
+    { src: "images/Img3.jpeg", caption: "Lab Head Dr. Subbarao Boddu with Industry Partner during testbed setup." },
+    { src: "images/Img4.jpeg", caption: "6G Research Equipment" },
+    { src: "images/Img5.jpeg", caption: "Industry Collaboration Visit" },
+    { src: "images/Img6.jpeg", caption: "Visit of Prof. Gayathri from Monash University, Australia" },
+    { src: "images/Img7.jpeg", caption: "Student presenting her project to Prof. Gayathri during her visit from Monash University, Australia" }
+  ];
+
+  const icasspImages = [
     { src: "images/Img8.jpeg", caption: "ICASSP Satellite Event on 9th Nov, 2024" },
     { src: "images/Img9.jpeg", caption: "ICASSP Satellite Event on 9th Nov, 2024" },
     { src: "images/Img10.jpeg", caption: "ICASSP Satellite Event on 9th Nov, 2024" },
@@ -161,32 +177,43 @@
     { src: "images/Img17.jpeg", caption: "ICASSP Satellite Event on 9th Nov, 2024" }
   ];
 
-  function openLightbox(index) {
+
+  function openLightbox(index, galleryType) {
     currentIndex = index;
+
+    if (galleryType === 'lab') {
+      currentGallery = labImages;
+    } else if (galleryType === 'icassp') {
+      currentGallery = icasspImages;
+    }
+
     document.getElementById("lightbox").style.display = "flex";
     updateLightbox();
   }
 
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
 
   function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex = (currentIndex + 1) % currentGallery.length;
     updateLightbox();
   }
 
   function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
     updateLightbox();
   }
 
   function updateLightbox() {
     const img = document.getElementById("lightbox-img");
     const caption = document.getElementById("lightbox-caption");
-    img.src = images[currentIndex].src;
-    caption.textContent = images[currentIndex].caption;
+
+    img.src = currentGallery[currentIndex].src;
+    caption.textContent = currentGallery[currentIndex].caption;
   }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
 
   document.addEventListener("keydown", function(e) {
     if (document.getElementById("lightbox").style.display === "flex") {
