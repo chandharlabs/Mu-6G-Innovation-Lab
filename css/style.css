@@ -783,6 +783,11 @@ footer {
   background-color: #0047ab;
 }
 
+/* M.Tech – Royal Purple (Advanced & Specialized) */
+.badge.mtech {
+  background-color: #6a1b9a;   /* Royal purple */
+}
+
 /* B.Tech – Dark Green */
 .badge.btech {
   background-color: #0b6e4f;
