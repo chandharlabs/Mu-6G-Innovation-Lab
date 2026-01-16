@@ -753,10 +753,37 @@ footer {
 .team-nav-links li a {
   text-decoration: none;
   font-weight: 600;
-  color: #0047ab;
+  color: #2b2b2b;
   white-space: nowrap;        /* PREVENT LINE BREAK */
 }
 
 .team-nav-links li a:hover {
   text-decoration: underline;
+}
+
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  margin-right: 6px;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  vertical-align: middle;
+}
+
+/* PhD Scholar – Deep Red */
+.badge.phd {
+  background-color: #b11226;
+}
+
+/* JRF – Dark Blue */
+.badge.jrf {
+  background-color: #0047ab;
+}
+
+/* B.Tech – Dark Green */
+.badge.btech {
+  background-color: #0b6e4f;
 }
