@@ -792,3 +792,20 @@ footer {
 .badge.btech {
   background-color: #0b6e4f;
 }
+
+
+.faculty-photo img {
+  width: 170px;          /* REDUCED SIZE */
+  height: auto;
+  border-radius: 10px;   /* soft corners */
+  object-fit: cover;
+}
+
+.faculty-lead .faculty-photo img {
+  width: 200px;
+}
+
+.faculty-profile {
+  align-items: center;   /* vertical centering */
+  gap: 30px;
+}
