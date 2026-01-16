@@ -729,3 +729,34 @@ footer {
 }
 
 
+.team-nav {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.team-nav-links {
+  display: flex;              /* SINGLE ROW */
+  justify-content: center;    /* CENTERED */
+  align-items: center;
+  gap: 30px;                  /* SPACE BETWEEN ITEMS */
+  list-style: none;           /* REMOVE BULLETS */
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;          /* FORCE ONE LINE */
+}
+
+.team-nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.team-nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0047ab;
+  white-space: nowrap;        /* PREVENT LINE BREAK */
+}
+
+.team-nav-links li a:hover {
+  text-decoration: underline;
+}
