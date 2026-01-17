@@ -801,14 +801,14 @@ footer {
 
 
 .faculty-photo img {
-  width: 170px;          /* REDUCED SIZE */
+  width: 130px;          /* REDUCED SIZE */
   height: auto;
   border-radius: 10px;   /* soft corners */
   object-fit: cover;
 }
 
 .faculty-lead .faculty-photo img {
-  width: 200px;
+  width: 150px;
 }
 
 .faculty-profile {
