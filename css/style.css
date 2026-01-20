@@ -1040,15 +1040,16 @@ footer {
   text-decoration: none;
 }
 
-li a {
-  text-decoration: none;
-  color: #c4161c; /* or your theme red */
+.update-link {
+  color: #c4161c;
   font-weight: 600;
+  text-decoration: none;
 }
 
-li a:hover {
-  text-decoration: underline; /* optional hover effect */
+.update-link:hover {
+  text-decoration: underline;
 }
+
 
 
 
