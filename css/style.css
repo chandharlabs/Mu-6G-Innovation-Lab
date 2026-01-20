@@ -993,4 +993,15 @@ footer {
 }
 
 
+.inline-link {
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inline-link:hover,
+.inline-link:focus,
+.inline-link:active {
+  text-decoration: none;
+}
 
