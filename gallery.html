@@ -76,10 +76,51 @@
     <div class="gallery-item">
       <img src="images/Img7.jpeg" alt="Student Project Showcase" onclick="openLightbox(7, 'lab')">
     </div>
+    <div class="gallery-item">
+      <img src="images/25.jpeg" alt="Student Project Showcase" onclick="openLightbox(8, 'lab')">
+    </div>
 
   </div>
 </section>
 
+
+<section class="section light">
+  <p style="max-width: 800px; margin: 0 auto 40px;">
+    5G TECHNOLOGY & LIVE TESTBED EXPERIENCE held on <strong>28th January 2026</strong>.
+  </p>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="images/18.jpeg" alt="5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" onclick="openLightbox(0, '5gtech')">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/19.jpeg" alt="5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" onclick="openLightbox(1, '5gtech')">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/20.jpeg" alt="5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" onclick="openLightbox(2, '5gtech')">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/21.jpeg" alt="5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" onclick="openLightbox(3, '5gtech')">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/22.jpeg" alt="5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" onclick="openLightbox(4, '5gtech')">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/23.png" alt="5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" onclick="openLightbox(5, '5gtech')">
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/24.jpeg" alt="5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" onclick="openLightbox(6, '5gtech')">
+    </div>
+
+  </div>
+</section>
 
 <section class="section light">
   <p style="max-width: 800px; margin: 0 auto 40px;">
@@ -161,7 +202,18 @@
     { src: "images/Img4.jpeg", caption: "6G Research Equipment" },
     { src: "images/Img5.jpeg", caption: "Industry Collaboration Visit" },
     { src: "images/Img6.jpeg", caption: "Visit of Prof. Gayathri from Monash University, Australia" },
-    { src: "images/Img7.jpeg", caption: "Student presenting her project to Prof. Gayathri during her visit from Monash University, Australia" }
+    { src: "images/Img7.jpeg", caption: "Student presenting her project to Prof. Gayathri during her visit from Monash University, Australia" },
+    { src: "images/25.jpeg", caption: "Visit of Dr. RICHARD PINTO ex-professor IIT BOMBAY" }
+  ];
+  
+  const tech5GImages = [
+    { src: "images/18.jpeg", caption: "5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" },
+    { src: "images/19.jpeg", caption: "5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" },
+    { src: "images/20.jpeg", caption: "5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" },
+    { src: "images/21.jpeg", caption: "5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" },
+    { src: "images/22.jpeg", caption: "5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" },
+    { src: "images/23.png", caption: "5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" },
+    { src: "images/24.jpeg", caption: "5G TECHNOLOGY & LIVE TESTBED EXPERIENCE" }
   ];
 
   const icasspImages = [
@@ -183,7 +235,9 @@
 
     if (galleryType === 'lab') {
       currentGallery = labImages;
-    } else if (galleryType === 'icassp') {
+    } else if (galleryType === '5gtech') {
+        currentGallery = tech5GImages;
+    }else if (galleryType === 'icassp') {
       currentGallery = icasspImages;
     }
 
